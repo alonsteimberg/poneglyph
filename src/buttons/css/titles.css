@@ -1,0 +1,180 @@
+:root {
+    --titles-height: 4px;
+    --title-length: 40px;
+    --margin-titels-side: 40%;
+}
+
+.home-page {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: block;  
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: bisque;
+    z-index: -1;
+}
+
+.info-wrap {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: inherit;
+    
+    /*background-color: rgb(233, 233, 233);*/
+}
+
+
+.titles {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5%;
+    align-content: center;
+    padding-left: var(--margin-titels-side);
+    padding-right: var(--margin-titels-side);
+
+    background-color: rgb(247, 247, 247);
+}
+
+.title {
+    padding-top: var(--titles-height);
+}
+
+.info-line {
+    display: flex;
+    padding-left: var(--margin-titels-side);
+    padding-right: var(--margin-titels-side);
+    padding-bottom: 20px;
+    background-color: rgb(247, 247, 247);
+}
+
+.info-title {
+    color: gray;
+    padding-top: 3px;
+    margin-bottom: 6px;
+}
+
+.info-field {
+    cursor: pointer;
+}
+
+/* remove this - it overrides the md files */
+ul {
+    list-style-type: none;
+    margin: 0 0 0 6px;
+    padding: 0 0 8px 0;
+}
+
+.title-btn {
+    height: var(--title-length);
+    background-color: Transparent;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
+
+/* some css that should move to other place when finding good way to use differnet css files */
+
+.horizontal-navigation-bar {
+    display: block;
+    overflow: hidden;
+}
+
+.horizontal-navigation-bar-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 3%;
+    padding-right: 3%;
+    top: -300px;
+}
+
+.horizontal-navigation-bar-button {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: none;
+    font-size: x-large;
+    color: rgba(0, 0, 0, 0.64);
+    cursor: pointer;
+    background-color: rgba(228, 228, 236, 0.945);
+}
+
+.horizontal-navigation-bar-button:disabled {
+    color: rgba(0, 0, 0, 0.56);
+    background-color: rgba(228, 228, 236, 0.945);
+    cursor: default;
+    opacity: 70%;
+}
+
+.horizontal-navigation-bar-items {
+    margin: 175px 0 0 150px;
+    display: flex;
+    justify-content: left;
+    position: relative;
+    gap: 20px;
+    overflow: unset;
+    transition: all 0.3s ease;
+}
+
+.info-card {
+    /* move to consts*/
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    width: 300px;
+    height: auto;
+    border-radius: 25px;
+    min-height: 550px;
+    min-width: 250px;
+    background-position: center;
+    animation: fadeIn 1s ease;
+}
+
+.info-card-title {
+    /* move to consts*/
+    font-size: 30px;
+    padding-top: 5%;
+    padding-left: 10%;
+    color: bisque;
+    background-color: transparent;
+    position: inherit;
+}
+
+.info-card-content {
+    /* move to consts*/
+    font-size: 20px;
+    padding-top: 5%;
+    padding-left: 10%;
+    color: bisque;
+    background-color: transparent;
+    position: inherit;
+}

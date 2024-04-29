@@ -1,0 +1,42 @@
+:root {
+    --text-base-color: rgb(88, 88, 88);
+}
+
+.toggle-nested-list-wrap {
+    position: inherit;
+    background-color: rgb(233, 233, 233);
+}
+
+.toggle-nested-list {
+    display: flex;
+    flex-direction: column; 
+    padding: 0;
+    margin: 0;
+}
+
+.toggle-nested-list-title {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+}
+
+.toggle-nested-list-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 1.5em;
+}
+
+/* TODO: change to be on clicked instead of hover*/
+.toggle-nested-list-item:hover {
+    background-color: aqua;
+}
+
+.toggle-icon {
+    padding: 5px 5px 5px 5px;
+    max-height: 15px;
+}
+
+.toggle-icon.on {
+    transform: rotate(90deg);
+}

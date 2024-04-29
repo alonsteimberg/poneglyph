@@ -1,0 +1,104 @@
+.documentation-page {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.documentation-page-body {
+    display: flex;
+    gap: 30px;
+    max-width: 90rem;
+    height: calc(100% - 66px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toggle-nested-list {
+    background-color: white;
+}
+
+.documentation-navigation {
+    background-color: white;
+    border-right: rgb(238, 238, 238) solid 2px;
+
+    width: 16rem;
+    padding: 1rem;
+
+    user-select: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-color: gray white;
+    scrollbar-width: thin;
+}
+/*
+    color: rgba(107, 114, 128, 1);
+*/
+@media not all and (min-width: 768px) {
+    .documentation-navigation {
+        transform: translateY(-100%);
+    }
+}
+
+@media (max-width: 767px) {
+    .documentation-navigation {
+        will-change: transform, opacity;
+        contain: layout style;
+        backface-visibility: hidden;
+        transition: transform .8s cubic-bezier(.52, .16, .04, 1);
+    }
+}
+
+@media (max-width: 767px) {
+    .documentation-navigation {
+        overscroll-behavior: contain;
+        --tw-bg-opacity: 1;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+.documentation-content {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    overflow: auto;
+}
+
+.documentation-page-header {
+    height: 64px;
+    background-color: inherit;
+    border-bottom: rgb(238, 238, 238) solid 2px;
+}
+
+.nested-list > li {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.nested-list > ul { 
+    margin: 1.25rem 0 .5rem 0;
+    padding-top: .375rem;
+    padding-bottom: .375rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.toggle-nested-list-wrap {
+    color: rgba(107, 114, 128, 1);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.toggle-nested-list-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.documentation-content > p > img{
+    max-width: 100%;
+    max-height: 1000px;
+}
